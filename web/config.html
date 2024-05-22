@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aerial Config</title>
+    <title>EET Screensaver Config</title>
     <script>if (typeof module === 'object') {
         window.module = module;
         module = undefined;
@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="w3-top" style="background-color: white">
-    <h1 style="padding-left: 1%">Aerial Config</h1>
+    <h1 style="padding-left: 1%">EET Screensaver Config</h1>
     <div class="w3-bar w3-grey">
         <button class="w3-bar-item w3-button tablink w3-blue" onclick="changeTab(event,'settingsTab')">Settings</button>
         <button class="w3-bar-item w3-button tablink" onclick="changeTab(event,'videoTab')">Videos</button>
@@ -53,7 +53,7 @@
                     <h3>General Settings</h3>
                 </div>
                 <div class="w3-display-container cardContent" style="padding: 2%">
-                    <label for="startAfter">Start Aerial After</label>
+                    <label for="startAfter">Start EET Screensaver After</label>
                     <input style="width: 10%; display: inline !important;" class="w3-input" type="number"
                            id="startAfter" onchange="updateSetting('startAfter','number')" min=0>
                     minutes
@@ -76,11 +76,11 @@
                     <label for="lockAfterRunAfter">
                         Wait <input style="width: 10%; display: inline !important;" class="w3-input" type="number"
                                     id="lockAfterRunAfter" onchange="updateSetting('lockAfterRunAfter','number')">
-                        seconds before locking on wakeup after Aerial starts.</label>
+                        seconds before locking on wakeup after EET Screensaver starts.</label>
                     <br><br>
                     <input type="checkbox" id="runOnBattery" class="w3-check"
                            onclick="updateSetting('runOnBattery','check')">
-                    <label for="runOnBattery">Run Aerial on battery power</label>
+                    <label for="runOnBattery">Run EET Screensaver on battery power</label>
                 </div>
             </div>
             <div id="playbackSettings" class="settingsCard" style="display: none">
@@ -92,7 +92,7 @@
                            onclick="updateSetting('avoidDuplicateVideos','check')">
                     <label for="avoidDuplicateVideos">Avoid duplicate videos</label>
                     <br>
-                    <i class="w3-small" style="padding-left: 4%">When this option is enabled Aerial will avoid playing
+                    <i class="w3-small" style="padding-left: 4%">When this option is enabled EET Screensaver will avoid playing
                         the
                         most recently played videos</i>
                     <hr>
@@ -282,13 +282,13 @@
                 <div class="w3-display-container cardContent" style="padding: 2%">
                     <input type="checkbox" id="useTray" class="w3-check" onclick="updateSetting('useTray','check')">
                     <label for="useTray">Auto launch from system tray</label>
-                    <p class="w3-small" style="margin-left: 4%">This option will cause Aerial to run on system start up
+                    <p class="w3-small" style="margin-left: 4%">This option will cause EET Screensaver to run on system start up
                         and
                         launch itself after your system is idle</p>
                     <br>
                     <input type="checkbox" id="enableGlobalShortcut" class="w3-check"
                            onclick="updateSetting('enableGlobalShortcut','check'); newGlobalShortcut();">
-                    <label for="enableGlobalShortcut">Use a shortcut to launch Aerial</label>
+                    <label for="enableGlobalShortcut">Use a shortcut to launch EET Screensaver</label>
                     <br>
                     <label for="globalShortcutModifier1">Modifier: </label>
                     <select id="globalShortcutModifier1"
@@ -325,16 +325,16 @@
                     </button>
                     <button class="w3-button w3-white w3-border w3-border-red w3-round-large"
                             onclick="refreshAerial()">
-                        Refresh Aerial
+                        Refresh EET Screensaver
                     </button>
                     <button class="w3-button w3-red w3-border-white w3-round-large" onclick="resetAerial()">Reset
-                        Aerial
+                        EET Screensaver
                     </button>
                 </div>
             </div>
             <div id="aboutSettings" class="settingsCard" style="display: none">
                 <div class="w3-container w3-blue cardHeader">
-                    <h3>About Aerial</h3>
+                    <h3>About EET Screensaver</h3>
                 </div>
                 <div class="w3-display-container cardContent" style="padding: 2%">
                     <h4>Apple TV screen saver for Windows</h4>
@@ -363,8 +363,8 @@
                     <div id="aboutUpdate" style="display: none">
                         <br>
                         <div class="w3-panel w3-pale-green" style="padding-bottom: 2%">
-                            <h4>A new version of Aerial is available!</h4>
-                            <a href="https://github.com/OrangeJedi/Aerial/releases" target="_blank">Click here</a>
+                            <h4>A new version of EET Screensaver is available!</h4>
+                            <a href="https://github.com/klausen-partners/eet-screensaver/releases" target="_blank">Click here</a>
                             to
                             download version v<span id="updateAvailable"></span>
                         </div>
@@ -576,7 +576,7 @@
             <span onclick="document.getElementById('timeFormatExplain').style.display='none'"
                   class="w3-button w3-display-topright">&times;</span>
             <br>
-            <p>Aerial uses Moment.js to display the current time. Use the characters in the table below to format
+            <p>EET Screensaver uses Moment.js to display the current time. Use the characters in the table below to format
                 the
                 time and date however you want it.</p>
             <table class="w3-table-all">
@@ -761,19 +761,16 @@
                   class="w3-button w3-display-topright">&times;</span>
             <br>
             <p>
-            <h2>Welcome to Aerial</h2>
-            <p>You've installed Aerial successfully! The next time your computer isn't doing anything Aerial will
+            <h2>Welcome to EET Screensaver</h2>
+            <p>You've installed EET Screensaver successfully! The next time your computer isn't doing anything EET Screensaver will
                 start
                 up and display those gorgeous screensavers.</p>
-            <p>If you want to fine-tweak how Aerial runs, chose what videos to play, or maybe even add a clock in
+            <p>If you want to fine-tweak how EET Screensaver runs, chose what videos to play, or maybe even add a clock in
                 the
                 corner, simply use this menu to configure it. To reopen the config window, right-click on the tray
                 icon
                 and select 'config'.</p>
-            <p>If you have any questions find us online at
-                <a href="https://github.com/OrangeJedi/Aerial">github.com/OrangeJedi/Aerial</a>
-            </p>
-            <p>Thanks for using Aerial! We hope you enjoy it!</p>
+            <p>Thanks for using the EET Screensaver! We hope you enjoy it!</p>
             <br>
             <button class="w3-button w3-white w3-border w3-border-blue w3-round-large"
                     onclick="document.getElementById('welcomeMessage').style.display='none';">

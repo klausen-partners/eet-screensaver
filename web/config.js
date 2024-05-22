@@ -195,13 +195,13 @@ function updateSettingVisibility() {
 
 //config functions
 function refreshAerial() {
-    alert("You will need to run Aerial again to finish the refresh");
+    alert("You will need to run EET Screensaver again to finish the refresh");
     electron.ipcRenderer.send('refreshConfig');
 }
 
 function resetAerial() {
-    if (confirm("This will reset all of Aerial's settings; this cannot be undone.\nAre you sure you want to do this?")) {
-        alert("You will need to run Aerial again to finish resetting");
+    if (confirm("This will reset all of EET Screensaver's settings; this cannot be undone.\nAre you sure you want to do this?")) {
+        alert("You will need to run EET Screensaver again to finish resetting");
         electron.ipcRenderer.send('resetConfig');
     }
 }

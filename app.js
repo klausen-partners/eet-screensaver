@@ -22,7 +22,7 @@ const fs = require('fs');
 const path = require("path");
 const AutoLaunch = require('auto-launch');
 let autoLauncher = new AutoLaunch({
-    name: 'Aerial',
+    name: 'EET Screensaver',
 });
 const SunCalc = require('suncalc');
 
@@ -258,12 +258,12 @@ function createTrayWindow() {
             },
             {type: "separator"},
             {
-                label: "Start Aerial", click: (item, window, event) => {
+                label: "Start EET Screensaver", click: (item, window, event) => {
                     createSSWindow();
                 }
             },
             {
-                label: 'Suspend Aerial',
+                label: 'Suspend EET Screensaver',
                 type: "checkbox",
                 checked: isSuspendChecked,
                 click: (e) => {
@@ -294,7 +294,7 @@ function createTrayWindow() {
             },
             {type: "separator"},
             {
-                label: "Exit Aerial", click: (item, window, event) => {
+                label: "Exit EET Screensaver", click: (item, window, event) => {
                     app.quit();
                 }
             },
@@ -303,7 +303,7 @@ function createTrayWindow() {
 
     trayWin.tray = new Tray(path.join(__dirname, 'icon.ico'));
     trayWin.tray.setContextMenu(newMenu(false));
-    trayWin.tray.setToolTip("Aerial");
+    trayWin.tray.setToolTip("EET Screensaver");
 }
 
 function createJSONConfigWindow() {
@@ -348,7 +348,7 @@ function startUp() {
     checkForUpdate();
     setupGlobalShortcut();
     store.set('numDisplays', screen.getAllDisplays().length);
-    //configures Aerial to launch on startup
+    //configures EET Screensaver to launch on startup
     if (store.get('useTray') && app.isPackaged) {
         autoLauncher.enable();
     } else {
@@ -517,7 +517,7 @@ function setUpConfigFile() {
 
 //check for update on GitHub
 function checkForUpdate() {
-    request('https://raw.githubusercontent.com/OrangeJedi/Aerial/master/package.json', function (error, response, body) {
+    request('https://raw.githubusercontent.com/klausen-partners/eet-screensaver/master/package.json', function (error, response, body) {
         if (error) {
             console.log("Error checking for updates: ", error);
             return;
@@ -528,8 +528,8 @@ function checkForUpdate() {
             if (onlinePackage.version[0] > app.getVersion()[0] || onlinePackage.version[2] > app.getVersion()[2] || onlinePackage.version[4] > app.getVersion()[4]) {
                 store.set('updateAvailable', onlinePackage.version);
                 new Notification({
-                    title: "An update for Aerial is available",
-                    body: `Version ${onlinePackage.version} is available for download. Visit https://github.com/OrangeJedi/Aerial/releases to update Aerial.`
+                    title: "An update for EET Screensaver is available",
+                    body: `Version ${onlinePackage.version} is available for download. Visit https://github.com/klausen-partners/eet-screensaver/releases to update EET Screensaver.`
                 }).show()
             }
         }
@@ -725,7 +725,7 @@ ipcMain.on('consoleLog', (event, msg) => {
 
 //events from the system
 powerMonitor.on('resume', () => {
-    //let Aerial know that the system has been woken up so it can run again
+    //let EET Screensaver know that the system has been woken up so it can run again
     isComputerSleeping = false;
     isComputerSuspendedOrLocked = false;
     closeAllWindows();
@@ -746,7 +746,7 @@ powerMonitor.on('unlock-screen', () => {
     closeAllWindows();
 });
 
-//let Aerial load the video with Apple's self-signed cert
+//let EET Screensaver load the video with Apple's self-signed cert
 app.on('certificate-error', (event, webContents, url, error, certificate, callback) => {
     if (url.match(/^https:\/\/sylvan.apple.com/) !== null) {
         event.preventDefault();

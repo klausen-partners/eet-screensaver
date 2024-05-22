@@ -1,8 +1,8 @@
 {
-  "name": "aerial",
-  "version": "1.2.1",
+  "name": "eet",
+  "version": "1.0.0",
   "videoJSONVersion": "1.15.0",
-  "description": "Apple TV screen saver for Windows",
+  "description": "EET Screensaver for Windows",
   "main": "app.js",
   "scripts": {
     "start": "electron .",
@@ -40,7 +40,7 @@
       "perMachine": false
     },
     "portable": {
-      "artifactName": "aerial.exe",
+      "artifactName": "eet.exe",
       "useZip": true
     },
     "files": [
@@ -48,6 +48,6 @@
       "!images/*"
     ],
     "icon": "icon.ico",
-    "productName": "Aerial"
+    "productName": "EET Screensaver"
   }
 }
