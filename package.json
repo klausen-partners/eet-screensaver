@@ -9,16 +9,8 @@
     "dist": "electron-builder",
     "build": "electron-builder build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OrangeJedi/Aerial.git"
-  },
-  "author": "OrangeJedi",
+  "author": "Klausen og Partners",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OrangeJedi/Aerial/issues"
-  },
-  "homepage": "https://github.com/OrangeJedi/Aerial#readme",
   "devDependencies": {
     "electron": "^22.2.0",
     "electron-builder": "^24.0.0"
