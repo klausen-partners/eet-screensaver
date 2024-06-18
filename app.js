@@ -405,10 +405,10 @@ function setUpConfigFile() {
 
     //start up settings
     store.set('useTray', store.get('useTray') ?? true);
-    store.set('startAfter', store.get('startAfter') ?? 10);
+    store.set('startAfter', store.get('startAfter') ?? 15);
     store.set('blankScreen', store.get('blankScreen') ?? true);
-    store.set('blankAfter', store.get('blankAfter') ?? 30);
-    store.set('sleepAfterBlank', store.get('sleepAfterBlank') ?? true);
+    store.set('blankAfter', store.get('blankAfter') ?? 60);
+    store.set('sleepAfterBlank', store.get('sleepAfterBlank') ?? false);
     store.set('lockAfterRun', store.get('lockAfterRun') ?? false);
     store.set('lockAfterRunAfter', store.get('lockAfterRunAfter') ?? 15);
     store.set('runOnBattery', store.get('runOnBattery') ?? true);
